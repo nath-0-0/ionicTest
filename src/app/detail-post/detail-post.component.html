@@ -1,0 +1,23 @@
+
+<ion-card *ngIf="post$|async as post">
+    <ion-card-header>
+      <ion-card-title> {{ post.title }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        {{ post.body }}
+    </ion-card-content>
+</ion-card>
+<ion-card *ngIf="(comments$|async) as comments">
+    <ion-item *ngFor="let comment of comments">
+        <ion-label text-wrap>
+          <ion-text color="primary">
+            <h3>{{comment?.name}}</h3>
+          </ion-text> 
+          <ion-text>
+            <p><i>{{comment?.email}}</i></p>
+          </ion-text>
+          <p>{{comment?.body}}</p>
+        </ion-label>
+      </ion-item>
+</ion-card>

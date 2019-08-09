@@ -1,0 +1,20 @@
+
+<form [formGroup]="formPost">
+<ion-list>
+<ion-item>
+  <ion-label>
+    titre:
+  </ion-label>
+  <ion-input formControlName="title"></ion-input>
+</ion-item>
+
+<ion-item >
+  <ion-label>
+    body:
+  </ion-label>
+  <ion-input formControlName="body"></ion-input>
+</ion-item>
+</ion-list>
+<ion-button color="primary" (click)= "submit()">Primary</ion-button>
+
+</form>

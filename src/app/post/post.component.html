@@ -1,0 +1,11 @@
+
+    <ion-grid>
+      <ion-row *ngFor="let post of posts$ | async">
+          <ion-text color="secondary">
+              <h1 tappable [routerLink]="post.id" >{{  post.title}}</h1>
+              {{ post.body }}
+          </ion-text>
+      </ion-row>
+    </ion-grid>
+  
+    
