@@ -34,5 +34,5 @@ const KrakoukassPlugin = new KrakoukassPluginWeb();
 export { KrakoukassPlugin };
 
 import { registerWebPlugin } from '@capacitor/core';
-import { start } from 'repl';
+// import { start } from 'repl';
 registerWebPlugin(KrakoukassPlugin);
